@@ -1,9 +1,15 @@
 // widescreens
 @include mediaXl {
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 // standard desktop and laptop screens
 @include mediaLg {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 // tablets and smaller laptop screens
@@ -43,9 +49,13 @@
       width: 150px;
       height: 150px;
     }
+    .projects {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
-  .about-info {
+  .about-info,
+  .bio-image {
     display: block;
     text-align: left;
   }
@@ -60,5 +70,8 @@
 
   h2 {
     font-size: 1.25rem;
+  }
+  .projects {
+    grid-template-columns: 1fr;
   }
 }
